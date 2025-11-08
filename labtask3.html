@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      margin: 0;
+      padding: 20px;
+    }
+h1{
+      margin-bottom: 10px;
+       font-size: 9px;
+       
+}
+    h2 {
+      text-align: center;
+      color: red;
+      margin-bottom: 10px;
+    }
+
+    form {
+      background-color: #c8d7dc;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px 40px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    fieldset {
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      padding: 15px 25px;
+    }
+
+    legend {
+      font-weight: bold;
+      color: red;
+    }
+
+    label {
+      display: inline-block;
+      width: 160px;
+      vertical-align: top;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 300px;
+      padding: 5px;
+      border: 1px solid #aaa;
+      border-radius: 3px;
+    }
+
+    textarea {
+      height: 60px;
+      resize: none;
+    }
+
+    .radio-group,
+    .checkbox-group {
+      margin-left: 160px;
+      margin-bottom: 10px;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 6px;
+    }
+
+    .button-group {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      background-color: #e0e0e0;
+      border: 1px solid #999;
+      padding: 6px 20px;
+      margin: 0 5px;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: #d6d6d6;
+    }
+
+    p.note {
+      text-align: center;
+      font-size: 13px;
+      color: #333;
+
+    }
+checkbox-volunteer{
+    text-align:left;
+}
+
+  </style>
+</head>
+<body>
+  <form>
+    <p>*- Denotes Required Information</p>
+    <h1>>1 donation   >2 Confirmation  > Thank you  </h1>
+    
+
+    <!-- Donor Information -->
+    <fieldset>
+    
+      <legend>Donor Information</legend>
+
+      <label>First Name*:</label><input type="text" name="fname" required><br>
+      <label>Last Name*:</label><input type="text" name="lname" required><br>
+      <label>Company:</label><input type="text" name="company"><br>
+      <label>Address 1*:</label><input type="text" name="address1" required><br>
+      <label>Address 2:</label><input type="text" name="address2"><br>
+      <label>City*:</label><input type="text" name="city" required><br>
+      <label>State*:</label>
+      <select required>
+        <option value="">Select a State</option>
+        <option>Alabama</option>
+        <option>Alaska</option>
+        <option>Arizona</option>
+        <option>Arkansas</option>
+        <option>California</option>
+        <option>Colorado</option>
+      </select><br>
+      <label>Zip Code*:</label><input type="text" name="zip" required><br>
+      <label>Country*:</label>
+      <select required>
+        <option value="">Select a Country</option>
+        <option>USA</option>
+        <option>Canada</option>
+        <option>UK</option>
+      </select><br>
+      <label>Phone:</label><input type="tel" name="phone"><br>
+      <label>Fax:</label><input type="text" name="fax"><br>
+      <label>Email*:</label><input type="email" name="email" required><br>
+
+      <label>Donation Amount*:</label>
+      <div class="radio-group">
+        <input type="radio" name="amount" value="none" required> None
+        <input type="radio" name="amount" value="50"> $50
+        <input type="radio" name="amount" value="75"> $75
+        <input type="radio" name="amount" value="100"> $100
+        <input type="radio" name="amount" value="250"> $250
+        <input type="radio" name="amount" value="other"> Other
+      </div>
+
+      <label>Other Amount $:</label><input type="text" name="otherAmount"><br>
+
+      <label>Recurring Donation:</label>
+      <div class="checkbox-group">
+        <input type="checkbox" name="recurring"> I am interested in giving on a regular basis.<br>
+        <label style="margin-left:0;">Monthly Credit Card $</label>
+        <input type="text" name="monthly" style="width:80px;"> For
+        <input type="text" name="months" style="width:60px;"> Months
+      </div>
+   
+
+    <!-- Honorarium and Memorial -->
+    
+      <legend>Honorarium and Memorial Donation Information</legend>
+
+      <p>I would like to make this donation:</p>
+      <div class="radio-group">
+        <input type="radio" name="honor" value="honor"> To Honor <br>
+        <input type="radio" name="honor" value="memory"> In Memory Of
+      </div>
+
+      <label>Name:</label><input type="text" name="honorName"><br>
+      <label>Acknowledge Donation to:</label><input type="text" name="ack"><br>
+      <label>Address:</label><input type="text" name="ackAddress"><br>
+      <label>City:</label><input type="text" name="ackCity"><br>
+      <label>State:</label>
+      <select>
+        <option value="">Select a State</option>
+        <option>Alabama</option>
+        <option>Alaska</option>
+        <option>Arizona</option>
+      </select><br>
+      <label>Zip:</label><input type="text" name="ackZip"><br>
+   
+
+    <!-- Additional Information -->
+   <br>
+      <legend>Additional Information</legend>
+
+      <p>Please enter your name, company or organization as you would like it to appear in our publications:</p>
+      <label>Name:</label><input type="text" name="pubName"><br>
+
+      <div class="checkbox-group">
+        <input type="checkbox" name="anonymous"> I would like my gift to remain anonymous.<br>
+        <input type="checkbox" name="matching"> My employer offers a matching gift program. I will mail the matching gift form.<br>
+        <input type="checkbox" name="nothanks"> Please save the cost of acknowledging this gift by not mailing a thank you letter.
+      </div>
+
+      <label>Comments:</label>
+      <textarea name="comments" placeholder="Please type any questions or feedback here"></textarea><br>
+
+      <label>How may we contact you?</label>
+      <div class="checkbox-group">
+        <input type="checkbox" name="contact" value="email"> E-mail<br>
+        <input type="checkbox" name="contact" value="post"> Postal Mail<br>
+        <input type="checkbox" name="contact" value="phone"> Telephone<br>
+        <input type="checkbox" name="contact" value="fax"> Fax
+      </div>
+
+      <p>I would like to receive newsletters and information about special events by:</p>
+      <div class="checkbox-group">
+        <input type="checkbox" name="news" value="email"> E-mail<br>
+        <input type="checkbox" name="news" value="post"> Postal Mail
+      </div>
+
+      <div class="checkbox-volunteer">
+        <input type="checkbox" name="volunteer"> I would like information about volunteering.
+      </div>
+
+    </fieldset>
+
+    <div class="button-group">
+      <input type="reset" value="Reset">
+      <input type="submit" value="Continue">
+    </div>
+
+    <p class="note">Donate online with confidence. You are on a secure server.</p>
+  </form>
+
+</body>
+</html>
