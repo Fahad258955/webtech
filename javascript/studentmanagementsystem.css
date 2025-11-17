@@ -1,0 +1,43 @@
+/* Student List styles */
+.student-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.student-item {
+    margin: 5px;
+    padding: 8px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+/* Buttons inside list */
+.btn-delete {
+    color: red;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.btn-edit {
+    color: blue;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Global button styles */
+button {
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #add8e6;
+}
